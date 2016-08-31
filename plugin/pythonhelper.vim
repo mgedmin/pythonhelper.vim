@@ -25,7 +25,7 @@
 " 2. Copy script pythonhelper.vim to the $HOME/.vim/plugin directory
 " 3. Run Vim and open any python file.
 "
-python << EOS
+python3 << EOS
 
 # import of required modules {{{
 import re
@@ -557,7 +557,7 @@ def findTag(bufferNumber, changedTick):
             nearestLineNumber = tagLineNumbers[nearestLineIndex]
 
             # walk through all the lines in range (nearestTagLine, cursorRow) {{{
-            for lineNumber in xrange(nearestLineNumber + 1, row):
+            for lineNumber in range(nearestLineNumber + 1, row):
                 # get the current line
                 line = currentBuffer[lineNumber]
 
@@ -633,7 +633,7 @@ def findTag(bufferNumber, changedTick):
         # }}}
 
         # spit out the error {{{
-        print "ERROR: %s %s %s:%u" % (ec.__name__, ei, tb.tb_frame.f_code.co_filename, tb.tb_lineno,)
+        print("ERROR: %s %s %s:%u" % (ec.__name__, ei, tb.tb_frame.f_code.co_filename, tb.tb_lineno,))
         time.sleep(0.5)
         # }}}
     # }}}
@@ -678,7 +678,7 @@ function! PHCursorHold()
     " }}}
 
     " call python function findTag() with the current buffer number and changed ticks
-    execute 'python findTag(' . expand("<abuf>") . ', ' . b:changedtick . ')'
+    execute 'python3 findTag(' . expand("<abuf>") . ', ' . b:changedtick . ')'
 endfunction
 
 
@@ -687,7 +687,7 @@ function! PHBufferDelete()
     let w:PHStatusLine = ""
 
     " call python function deleteTags() with the cur
-    execute 'python deleteTags(' . expand("<abuf>") . ')'
+    execute 'python3 deleteTags(' . expand("<abuf>") . ')'
 endfunction
 
 
