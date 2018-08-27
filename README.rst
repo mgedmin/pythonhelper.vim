@@ -4,8 +4,8 @@ Overview
 Vim script to help moving around in larger Python source files. It displays
 current class, method or function the cursor is placed in in the status line
 for every python file.  It's more clever than Yegappan Lakshmanan's taglist.vim
-because it takes into account indetation and comments to determine what tag the
-cursor is placed in and from version 0.80 doesn't need exuberant ctags utility.
+because it takes into account indentation and comments to determine what tag the
+cursor is placed on and from version 0.80 doesn't need exuberant ctags utility.
 
 This is a fork of http://www.vim.org/scripts/script.php?script_id=435
 
