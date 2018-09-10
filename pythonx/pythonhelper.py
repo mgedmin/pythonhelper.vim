@@ -565,6 +565,16 @@ def findTag(bufferNumber, changedTick):
                     if (line[i] == '#'):
                         continue
                     # }}}
+                    # if the next character is a ')', skip the line {{{
+                    # this is so that the following style works correctly:
+                    #
+                    #     def foo(
+                    #         args,
+                    #     ):
+                    #         pass
+                    if (line[i] == ')'):
+                        continue
+                    # }}}
 
                     # if the line's indentation starts before or at the nearest tag's one, the tag is invalid {{{
                     if (lineStart <= tags[nearestLineNumber].indentLevel):

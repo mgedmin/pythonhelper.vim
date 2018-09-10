@@ -1,8 +1,8 @@
 " File: pythonhelper.vim
 " Author: Michal Vitecek <fuf-at-mageo-dot-cz>
 " Maintainer: Marius Gedminas <marius@gedmin.as>
-" Version: 0.93
-" Last Modified: 2017-03-14
+" Version: 0.94
+" Last Modified: 2018-09-10
 "
 " Overview
 " --------
