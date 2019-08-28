@@ -12,14 +12,21 @@ This is a fork of http://www.vim.org/scripts/script.php?script_id=435
 Needs Vim built with Python support.
 
 
+Deprecation
+-----------
+
+This plugin was superseded by `taghelper.vim
+<https://github.com/mgedmin/taghelper.vim>`_, which supports more languages.
+
+
 Installation
 ------------
 
-I recommend `Vundle <https://github.com/gmarik/vundle>`_, `pathogen
-<https://github.com/tpope/vim-pathogen>`_ or `Vim Addon Manager
-<https://github.com/MarcWeber/vim-addon-manager>`_.  E.g. with Vundle do ::
+I recommend a plugin manager like vim-plug_::
 
-  :PluginInstall mgedmin/pythonhelper.vim
+  Plug 'mgedmin/pythonhelper.vim'
+
+.. _vim-plug: https://github.com/junegunn/vim-plug
 
 Manual installation:
 
@@ -40,6 +47,10 @@ Alternatives
 
 `Tagbar <https://github.com/majutsushi/tagbar>`_ looks like a better-maintained
 alternative that supports not just Python, but other languages as well.
+
+`taghelper.vim <https://github.com/mgedmin/taghelper.vim>`_ is my rewrite of
+this plugin, which supports more languages (but not as many as tagbar) and
+doesn't need an external ctags utility (unlike tagbar).
 
 
 Copyright
